@@ -1,11 +1,11 @@
-import { defineConfig } from '@tarojs/cli'
-
+import { defineConfig, type UserConfigExport } from '@tarojs/cli'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import devConfig from './dev'
 import prodConfig from './prod'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig(async (merge, { command, mode }) => {
-  const baseConfig = {
+  const baseConfig: UserConfigExport = {
     projectName: 'myApp',
     date: '2024-3-30',
     designWidth: 750,
@@ -52,6 +52,9 @@ export default defineConfig(async (merge, { command, mode }) => {
             generateScopedName: '[name]__[local]___[hash:base64:5]'
           }
         }
+      },
+      webpackChain(chain) {
+        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
       }
     },
     h5: {
@@ -78,6 +81,9 @@ export default defineConfig(async (merge, { command, mode }) => {
             generateScopedName: '[name]__[local]___[hash:base64:5]'
           }
         }
+      },
+      webpackChain(chain) {
+        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
       }
     },
     rn: {

@@ -10,7 +10,7 @@ export default function Index() {
 
   return (
     <View className='index'>
-      <Text className=' bg-black'>Hello worldawdas!</Text>
+      <Text className="bg-red-500">Hello world!</Text>
     </View>
   )
 }

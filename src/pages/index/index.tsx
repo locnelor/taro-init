@@ -11,7 +11,8 @@ export default function Index() {
 
   test()
   return (
-    <View className='index bg-red-200'>
+    <View className='index'>
+      <View className="text-[#acc855] text-[100px]">Hello world!</View>
       <Text>Hello worlddd!</Text>
       <AtButton>按钮文案</AtButton>
       <AtButton type='primary'>按钮文案</AtButton>

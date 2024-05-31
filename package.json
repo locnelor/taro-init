@@ -1,12 +1,12 @@
 {
-  "name": "myApp",
+  "name": "taro-init",
   "version": "1.0.0",
   "private": true,
-  "description": "taro-init",
+  "description": "info",
   "templateInfo": {
     "name": "default",
     "typescript": true,
-    "css": "None",
+    "css": "Sass",
     "framework": "React"
   },
   "scripts": {
@@ -56,7 +56,8 @@
     "@tarojs/shared": "3.6.24",
     "@tarojs/taro": "3.6.24",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "taro-ui": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
@@ -82,7 +83,6 @@
     "postcss": "^8.4.18",
     "react-refresh": "^0.11.0",
     "stylelint": "^14.4.0",
-    "taro-plugin-tailwind": "^1.3.4",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5.1.0",

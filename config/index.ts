@@ -4,10 +4,11 @@ import devConfig from './dev'
 import prodConfig from './prod'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
-export default defineConfig(async (merge, { command, mode }) => {
+export default defineConfig(async (merge) => {
+  console.log(process.env)
   const baseConfig: UserConfigExport = {
-    projectName: 'myApp',
-    date: '2024-3-30',
+    projectName: 'taro-init',
+    date: '2024-5-31',
     designWidth: 750,
     deviceRatio: {
       640: 2.34 / 2,
@@ -17,7 +18,9 @@ export default defineConfig(async (merge, { command, mode }) => {
     },
     sourceRoot: 'src',
     outputRoot: 'dist',
-    plugins: ['taro-plugin-tailwind'],
+    plugins: [
+
+    ],
     defineConstants: {
     },
     copy: {
@@ -58,6 +61,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       }
     },
     h5: {
+      esnextModules: ['taro-ui'],
       publicPath: '/',
       staticDirectory: 'static',
       output: {

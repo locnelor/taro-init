@@ -3,7 +3,11 @@ import { useLoad } from '@tarojs/taro'
 import './index.scss'
 import { AtButton, AtInput } from 'taro-ui'
 import { test } from '@/libs/test'
+import { useAppDispatch, useAppSelector } from '@/store'
+import { setTabbar } from '@/store/reducers/tabbarSlice'
 export default function Index() {
+  const dispatch = useAppDispatch()
+  const tabbar = useAppSelector(s => s.tabbar);
 
   useLoad(() => {
     console.log('Page loaded.')
@@ -12,6 +16,10 @@ export default function Index() {
   test()
   return (
     <View className='index'>
+      <View>
+        {tabbar.current}
+      </View>
+      <AtButton onClick={() => dispatch(setTabbar(tabbar.current + 1))}>click</AtButton>
       <View>
         {process.env.TARO_APP_TEST}
       </View>

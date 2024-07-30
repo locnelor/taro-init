@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro"
-import withPromiseCallback from "../withPromiseCallback"
+import withPromiseCallback from "./withPromiseCallback"
 
 
 export const request = <T extends string | TaroGeneral.IAnyObject | ArrayBuffer>(options: Taro.request.Option<any, any>) => {

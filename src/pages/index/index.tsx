@@ -6,7 +6,7 @@ import { test } from '@/libs/test'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { setTabbar } from '@/store/reducers/tabbarSlice'
 import { useCallback, useEffect, useState } from 'react'
-import { getStore, removeStore, setStore } from '@/libs/store'
+import { getStore, removeStore, setStore } from '@/api/store'
 export default function Index() {
   const dispatch = useAppDispatch()
   const tabbar = useAppSelector(s => s.tabbar);

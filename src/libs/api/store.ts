@@ -1,5 +1,5 @@
 import Taro, { TypedArray } from "@tarojs/taro"
-import withPromiseCallback from "./withPromiseCallback"
+import withPromiseCallback from "../withPromiseCallback"
 
 
 export const setStore = (key: string, data: any) => {

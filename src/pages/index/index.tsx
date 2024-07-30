@@ -12,6 +12,9 @@ export default function Index() {
   test()
   return (
     <View className='index'>
+      <View>
+        {process.env.TARO_APP_TEST}
+      </View>
       <View className="text-[#acc855] text-[100px]">Hello world!</View>
       <Text>Hello worlddd!</Text>
       <AtButton>按钮文案</AtButton>
